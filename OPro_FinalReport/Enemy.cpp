@@ -33,8 +33,6 @@ void Enemy::update()
     // ローカル変数
     // 移動速度
     static float move_speed = 4.0f;
-    // 移動時間
-    static float move_time = 0.0f;
     // 次撃つ発射角
     static float next_angle = 0.0f;
 
@@ -50,20 +48,8 @@ void Enemy::update()
         // 中レベル
         //   左右を滑らかに移動し、そこそこな速度の弾を全方位に法則的にばらまく
         case 1:
-            // 移動
-            x = 320 + std::sin(3.14f / 180.0f * move_time) * 320;
-            if (x < 0 ||
-                x > 640)
-            {
-                move_speed *= -1;
-            }
-            move_time++;
-            // 弾速度セット
-            for (int i = 0; i < MAX_ENEMY_SHOTS; ++i)
-            {
-                shots_speed[i] = 8;
-            }
-            next_angle += 10.0f;
+            behavior.set_strategy(new NormalStrategy());
+            behavior.do_behavior(&x, shots_speed, &next_angle);
             break;
         // 強レベル
         //   左右に瞬間移動をランダムに繰り返し、速い球を全方位にランダムにばらまく

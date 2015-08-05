@@ -24,7 +24,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
     Player* player = new Player();
     // エネミークラスのインスタンスを作成
     //   -------- 今回Strategyパターンを用いるところ --------
-    Enemy* enemy = new Enemy(0);
+    Enemy* enemy = new Enemy(2);
 
     // メインループ
     while (ScreenFlip() == 0 && ProcessMessage() == 0 && ClearDrawScreen() == 0)

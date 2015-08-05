@@ -85,12 +85,14 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyBehavior.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="NormalStrategy.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EasyStrategy.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyBehavior.h" />
+    <ClInclude Include="NormalStrategy.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Strategy.h" />
   </ItemGroup>
