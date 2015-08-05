@@ -54,15 +54,8 @@ void Enemy::update()
         // 強レベル
         //   左右に瞬間移動をランダムに繰り返し、速い球を全方位にランダムにばらまく
         case 2:
-            // 移動
-            x = rand() % 641;
-            // 弾速度セット
-            for (int i = 0; i < MAX_ENEMY_SHOTS; ++i)
-            {
-                shots_speed[i] = 16;
-            }
-            // 発射角セット
-            next_angle = rand() % 361;
+            behavior.set_strategy(new HardStrategy());
+            behavior.do_behavior(&x, shots_speed, &next_angle);
             break;
     }
     // -------- ↑問題の部分↑ --------

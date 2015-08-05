@@ -84,6 +84,7 @@
     <ClCompile Include="EasyStrategy.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyBehavior.cpp" />
+    <ClCompile Include="HardStrategy.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NormalStrategy.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -92,6 +93,7 @@
     <ClInclude Include="EasyStrategy.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyBehavior.h" />
+    <ClInclude Include="HardStrategy.h" />
     <ClInclude Include="NormalStrategy.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Strategy.h" />

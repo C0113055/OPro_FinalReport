@@ -12,6 +12,7 @@
 #include "Strategy.h"
 #include "EasyStrategy.h"
 #include "NormalStrategy.h"
+#include "HardStrategy.h"
 #include "EnemyBehavior.h"
 
 // エネミーの最大弾数
