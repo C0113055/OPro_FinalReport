@@ -81,13 +81,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EasyStrategy.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyBehavior.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EasyStrategy.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyBehavior.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Strategy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,11 +13,19 @@ Enemy::Enemy(int level)
 {
     this->level = level;
 
+    // 挙動クラス初期化
+    behavior = EnemyBehavior(new EasyStrategy());
+
     // ショットスピード初期化
     for (int i = 0; i < MAX_ENEMY_SHOTS; ++i)
     {
         shots_speed[i] = 4.0f;
     }
+}
+
+Enemy::~Enemy()
+{
+
 }
 
 void Enemy::update()
@@ -36,19 +44,8 @@ void Enemy::update()
         // 弱レベル
         //   左右移動をし、遅い弾を全方位に法則的にばらまく
         case 0:
-            // 移動
-            x += move_speed;
-            if (x < 0 ||
-                x > 640)
-            {
-                move_speed *= -1;
-            }
-            // 弾速度セット
-            for (int i = 0; i < MAX_ENEMY_SHOTS; ++i)
-            {
-                shots_speed[i] = 4;
-            }
-            next_angle += 10.0f;
+            behavior.set_strategy(new EasyStrategy());
+            behavior.do_behavior(&x, shots_speed, &next_angle);
             break;
         // 中レベル
         //   左右を滑らかに移動し、そこそこな速度の弾を全方位に法則的にばらまく

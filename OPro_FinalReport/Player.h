@@ -4,6 +4,8 @@
 
 // @author C0113055
 
+#pragma once
+
 // DXライブラリのインポート
 #include "DxLib.h"
 

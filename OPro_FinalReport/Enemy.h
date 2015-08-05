@@ -4,8 +4,14 @@
 
 // @author C0113055
 
+#pragma once
+
 // DXライブラリのインポート
 #include "DxLib.h"
+// Strategyクラスのインポート
+#include "Strategy.h"
+#include "EasyStrategy.h"
+#include "EnemyBehavior.h"
 
 // エネミーの最大弾数
 const int MAX_ENEMY_SHOTS = 256;
@@ -14,6 +20,9 @@ const int MAX_ENEMY_SHOTS = 256;
 class Enemy
 {
 private:
+    // context部分のクラス変数を作成
+    EnemyBehavior behavior;
+
     // エネミーのレベル
     int level = 0;
     // プレイヤー座標
@@ -32,7 +41,10 @@ private:
 public:
     // コンストラクタ
     //   引数に強さを入れる
+    Enemy() {};
     Enemy(int level);
+    // デストラクタ
+    ~Enemy();
 
     // 更新処理
     void update();
