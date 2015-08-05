@@ -1,5 +1,5 @@
 //
-// EasyStrategy
+// EnemyBehavior.cpp
 //
 
 // @author C0113055
